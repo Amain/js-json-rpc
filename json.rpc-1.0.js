@@ -1,7 +1,6 @@
 /**
  * JQuery based JSON-RPC 2.0 Client for Javascript version 1.0
  *
- *
  * The MIT License (MIT)
  * 
  * Copyright (c) 2014 Johan van Zoomeren
