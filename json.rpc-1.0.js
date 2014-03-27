@@ -29,7 +29,7 @@
  * 2014/03/27 Johan van Zoomeren  Version 1.0
  *
  */
- 
+
 $.jsonrpc_last_msg_id = 0;
 
 $.jsonrpcSetup = function( options ) 
@@ -60,11 +60,11 @@ $.jsonrpc = function( method, params, options )
       var aErrHandlers = [ options.error, $.ajaxSettings.error  , function() {} ];
 
       if ( 'result'  in reply    &&
-         'error'   in reply    &&
-         'id'      in reply    &&
-         reply.result !== null &&
-         reply.id     !== null &&
-         reply.error  === null    )
+           'error'   in reply    &&
+           'id'      in reply    &&
+           reply.result !== null &&
+           reply.id     !== null &&
+           reply.error  === null    )
       {
         for( var f in aSucHandlers ) 
         {
@@ -86,11 +86,11 @@ $.jsonrpc = function( method, params, options )
           if ( typeof fHandler === 'function' ) 
           {
             if ( 'result'  in reply    &&
-               'error'   in reply    &&
-               'id'      in reply    &&
-               reply.result === null &&
-               reply.id     !== null &&
-               reply.error  !== null    ) 
+                 'error'   in reply    &&
+                 'id'      in reply    &&
+                 reply.result === null &&
+                 reply.id     !== null &&
+                 reply.error  !== null    ) 
             {
               fHandler( null, 'jsonrpc-reply-error', reply.error );
             } else 
